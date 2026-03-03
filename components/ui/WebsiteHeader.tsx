@@ -4,6 +4,13 @@ import Title from "./Title";
 import Image from "next/image";
 import Link from "next/link";
 
+const MONTHS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+
+function formatDate(dateStr: string): string {
+  const [year, month, day] = dateStr.split("-");
+  return `${parseInt(day)} ${MONTHS[parseInt(month) - 1]} ${year}`;
+}
+
 type WebsiteHeaderType = {
   website: WebsiteType;
 };
@@ -13,11 +20,7 @@ export default function WebsiteHeader({ website }: WebsiteHeaderType) {
       <div className="px-6 py-12">
         <header className="text-center pb-12">
           <time dateTime={website.date}>
-            {new Date(website.date).toLocaleDateString("fr-FR", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })}
+            {formatDate(website.date)}
           </time>
           <Title tag="h1">{website.title}</Title>
           <div className="flex gap-2 justify-center">
