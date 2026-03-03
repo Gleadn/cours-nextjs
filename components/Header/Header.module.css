@@ -1,0 +1,26 @@
+/* Search input — conservé en module CSS pour l'isolation du composant */
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 32px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  height: 100%;
+  width: 160px;
+}
+
+.search button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  font-size: 0.875rem;
+}

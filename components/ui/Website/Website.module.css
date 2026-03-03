@@ -1,0 +1,14 @@
+/* Aspect-ratio + relative positioning — nécessaire pour next/image fill */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f0f0f0;
+  transition: opacity 0.2s ease;
+}
+
+:global(.group):hover .imageWrapper {
+  opacity: 0.85;
+}
