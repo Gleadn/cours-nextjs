@@ -3,5 +3,11 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+<<<<<<< HEAD
   alternate_grid: dynamic(() => import("./AlternateGrid")),
+=======
+  images_slice: dynamic(() => import("./ImagesSlice")),
+  text_slice: dynamic(() => import("./TextSlice")),
+  video_slide: dynamic(() => import("./VideoSlide")),
+>>>>>>> 0b6e01df4a6c254f545f420130654db24abf06b1
 };

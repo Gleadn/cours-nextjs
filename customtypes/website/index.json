@@ -1,32 +1,59 @@
 {
   "format": "page",
-  "id": "home",
-<<<<<<< HEAD
-  "label": "Home",
-  "repeatable": false,
+  "id": "website",
+  "label": "Site web",
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Titre",
+          "placeholder": ""
+        }
+      },
+      "img": {
+        "type": "Image",
+        "config": {
+          "label": "Image principale",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "weblink": {
+        "type": "Link",
+        "config": {
+          "label": "Lien du site",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "alternate_grid": {
+            "images_slice": {
+              "type": "SharedSlice"
+            },
+            "text_slice": {
+              "type": "SharedSlice"
+            },
+            "video_slide": {
               "type": "SharedSlice"
             }
           }
         }
-=======
-  "json": {
-    "Main": {
-      "slices": {
-        "config": {
-          "choices": {}
-        },
-        "fieldset": "Slice Zone",
-        "type": "Slices"
->>>>>>> 0b6e01df4a6c254f545f420130654db24abf06b1
       }
     },
     "SEO & Metadata": {
@@ -56,12 +83,5 @@
         "type": "Image"
       }
     }
-<<<<<<< HEAD
   }
-=======
-  },
-  "label": "Page d'accueil",
-  "repeatable": false,
-  "status": true
->>>>>>> 0b6e01df4a6c254f545f420130654db24abf06b1
 }

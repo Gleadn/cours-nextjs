@@ -1,23 +1,6 @@
 {
   "format": "page",
-  "id": "home",
-<<<<<<< HEAD
-  "label": "Home",
-  "repeatable": false,
-  "status": true,
-  "json": {
-    "Main": {
-      "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {
-            "alternate_grid": {
-              "type": "SharedSlice"
-            }
-          }
-        }
-=======
+  "id": "contact",
   "json": {
     "Main": {
       "slices": {
@@ -26,7 +9,6 @@
         },
         "fieldset": "Slice Zone",
         "type": "Slices"
->>>>>>> 0b6e01df4a6c254f545f420130654db24abf06b1
       }
     },
     "SEO & Metadata": {
@@ -56,12 +38,8 @@
         "type": "Image"
       }
     }
-<<<<<<< HEAD
-  }
-=======
   },
-  "label": "Page d'accueil",
+  "label": "Contact",
   "repeatable": false,
   "status": true
->>>>>>> 0b6e01df4a6c254f545f420130654db24abf06b1
 }

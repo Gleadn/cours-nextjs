@@ -1,12 +1,23 @@
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import Title from "@/components/ui/Title";
+import Video from "@/components/ui/Video";
 import Website from "@/components/ui/Website";
 import WebsiteHeader from "@/components/ui/WebsiteHeader";
-import { WebsiteType } from "@/types/Website";
-import websitesData from "@/public/websites.json";
+import { createClient } from "@/prismicio";
+
+export const metadata = {
+  title: "Titre de la page",
+  description: "Description de la page",
+};
 
 export default async function HomePage() {
-  const websites: WebsiteType[] = websitesData as WebsiteType[];
+  const client = createClient();
+  const websites = await client.getAllByType("website", {
+    limit: 4,
+    orderings: [
+      { field: "document.first_publication_date", direction: "desc" },
+    ],
+  });
 
   return (
     <main>
@@ -39,11 +50,7 @@ export default async function HomePage() {
           Highlight
         </Title>
 
-        <figure className="rounded-lg overflow-hidden w-full max-w-280 mt-12">
-          <video controls className="w-full">
-            <source src="/highlight.mp4" type="video/mp4" />
-          </video>
-        </figure>
+        <Video id="414785329" />
       </div>
     </main>
   );
